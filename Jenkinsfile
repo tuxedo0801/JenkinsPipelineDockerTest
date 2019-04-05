@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+                configFileProvider([configFile(fileId: '1875c4af-1841-47bf-b289-951a565458d1', variable: 'MAVEN_SETTINGS')]) {
                     sh 'mvn -s $MAVEN_SETTINGS clean deploy'
                 }
                 //sh 'mvn -B verify'
